@@ -7,21 +7,21 @@ const Home = () => {
         <Box component="main" sx={{ flexGrow: 1, bgcolor: 'grey.100', p: 3 }}>
             <AppBar position="static" elevation={0} sx={{ bgcolor: 'transparent', mb: 2 }}>
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
-                    <TextField
+                    {/* <TextField
                         placeholder="Type in to search"
                         variant="outlined"
                         size="small"
                         sx={{ bgcolor: 'white', width: '33%' }}
-                    />
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                    /> */}
+                    {/* <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                         <Typography variant="body1">Jason Doe</Typography>
                         <Avatar src="https://placehold.co/40x40" />
-                    </Box>
+                    </Box> */}
                 </Toolbar>
             </AppBar>
 
             <Typography variant="h4" gutterBottom>
-                Shire County Public Schools
+                Defence Guru Cyber Education Institute
             </Typography>
 
             <Grid container spacing={2} mb={4}>

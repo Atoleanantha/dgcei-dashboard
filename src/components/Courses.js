@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { 
-  Box, Typography, Card, CardContent, Grid, Button, 
-  TextField, CardActions, CardMedia, Snackbar, Alert, CircularProgress 
+import {
+  Box, Typography, Card, CardContent, Grid, Button,
+  TextField, CardActions, CardMedia, Snackbar, Alert, CircularProgress,
+  TextareaAutosize
 } from "@mui/material";
 import { fetchData, postData, deleteData } from "../services/apiService";
 
@@ -102,7 +103,7 @@ const Courses = () => {
       </Typography>
       <Grid container spacing={2} sx={{ mb: 2 }}>
         {/* Input Fields */}
-        {["title", "descrption", "discountPrice", "actualPrice", "discount", "mode"].map((field) => (
+        {["title", "discountPrice", "actualPrice", "discount", "mode"].map((field) => (
           <Grid item xs={12} sm={6} key={field}>
             <TextField
               label={field.charAt(0).toUpperCase() + field.slice(1)}
@@ -113,6 +114,7 @@ const Courses = () => {
             />
           </Grid>
         ))}
+
 
         <Grid item xs={12} sm={6}>
           <TextField
@@ -137,6 +139,18 @@ const Courses = () => {
             InputLabelProps={{ shrink: true }}
           />
         </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextareaAutosize
+            aria-label="Description"
+            placeholder="Enter description here"
+            minRows={3} // Sets the minimum rows for the Textarea
+            value={newCourse["descrption"]}
+            variant="outlined"
+            onChange={(e) => setNewCourse({ ...newCourse, "descrption": e.target.value })}
+            style={{ width: "100%", padding: "10px" }} // Style to ensure full width and padding
+          />
+
+        </Grid>
 
         {/* File Input */}
         <Grid item xs={12}>
@@ -150,7 +164,7 @@ const Courses = () => {
         </Grid>
       </Grid>
 
-<h3>Courses</h3>
+      <h3>Courses</h3>
       <Grid container spacing={3}>
         {courses.map((course) => (
           <Grid item xs={12} sm={6} md={4} key={course._id}>

@@ -6,12 +6,15 @@ import Courses from "./components/Courses";
 import Popups from "./components/Popups";
 import Placements from "./components/Placements";
 import Contact from "./components/Contact";
-
+import Home from "./components/Home"
 function App() {
   return (
+    <>
+    
     <Router>
       <Layout>
         <Routes>
+          <Route path="/" element={<Home/>}/>
           <Route path="/gallary" element={<Gallary />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/popups" element={<Popups />} />
@@ -20,6 +23,7 @@ function App() {
         </Routes>
       </Layout>
     </Router>
+    </>
   );
 }
 

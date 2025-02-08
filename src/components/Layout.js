@@ -13,6 +13,7 @@ const sidebarItems = [
   { text: "Courses", icon: <SchoolIcon />, path: "/courses" },
   { text: "Popups", icon: <PopupIcon />, path: "/popups" },
   { text: "Placements", icon: <WorkIcon />, path: "/placements" },
+  { text: "Testimonials", icon: <WorkIcon />, path: "/testimonial" },
   { text: "Contact Us", icon: <ContactsIcon />, path: "/contact" },
 ];
 

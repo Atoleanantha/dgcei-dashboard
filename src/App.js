@@ -7,6 +7,7 @@ import Popups from "./components/Popups";
 import Placements from "./components/Placements";
 import Contact from "./components/Contact";
 import Home from "./components/Home"
+import Testimonial from "./components/Testimonial";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/popups" element={<Popups />} />
           <Route path="/placements" element={<Placements />} />
+          <Route path="/testimonial" element={<Testimonial />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>

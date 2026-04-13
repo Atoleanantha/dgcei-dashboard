@@ -1,4 +1,6 @@
-![Video](Ui_images/Screen Recording 2024-11-10 012830.mp4)
+<video src="Ui_images/Screen Recording 2024-11-10 012830.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
 
 # Getting Started with Create React App
 
